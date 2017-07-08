@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<html>
+   <head>
+      <title>Bootstrap Example</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="../jquery.fullPage.css" />
+      <style>
+         body {
+         position: relative; 
+         }
+         #About  {padding-top:50px;height:1000px; background:url('http://p1.pichost.me/i/11/1342311.jpg') ;background-attachment: fixed;}    
+         #Education {padding-top:50px;height:1000px; background: url('http://p1.pichost.me/i/44/1677068.jpg') ; background-attachment: fixed;}
+         #Projects {padding-top:50px;height:1000px; background: url('https://www.planwallpaper.com/static/images/background-wallpapers-34.jpg') ;background-attachment: fixed;}
+         #Skills  {padding-top:50px;height:1000px; background: url('http://www.fyqyfz.com/data/uploads/19/347173-danbo-in-the-rain.jpg');background-attachment: fixed;}
+         #Contact {padding-top:50px;height:1000px; background: url('http://www.fyqyfz.com/data/uploads/53/466492-profile-pictures-for-girl-wallpaper.jpg');background-attachment: fixed;}
+      </style>
+   </head>
+    <body>
+      <div class="container-fluid">
+        <div class= "jumbotron">
+          <nav class="navbar navbar-fixed-top ">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand nav navbar-nav" href="#About" >Navaz Mannan</a>
+              </div>
+              <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#Education" data-scroll="true">Education</a></li>
+                  <li><a href="#Skills" data-scroll="true">Skills</a></li>
+                  <li><a href="#Projects" data-scroll="true">Projects</a></li>
+                  <li><a href="#Contact" data-scroll="true">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+          <div id="About">
+            <h1>About</h1>
+            <p>Wannabe Full Stack Developer, Entrepreneur</p>
+          </div>
+          <div id="Education">
+            <h1>Education</h1>
+            <p>IIIT A</p>
+          </div>
+          <div id="Skills">
+            <h1>Skills</h1>
+            <p>C/C++,Java,HTML,CSS</p>
+          </div>
+          <div id="Projects">
+            <h1>Projects</h1>
+            <p>Handwriiten Digit,Tool For Checking Patent</p>
+          </div>
+          <div id="Contact">
+            <h1>Contact</h1>
+            <p>navaz059@gmail.com,966308802</p>
+          </div>
+          
+      </div>
+      <script>
+         $(document).ready(function(){
+           // Add scrollspy to <body>
+           $('body').scrollspy({target: ".navbar", offset: 50});   
+         
+           // Add smooth scrolling on all links inside the navbar
+           $("#myNavbar a").on('click', function(event) {
+         
+             // Prevent default anchor click behavior
+             event.preventDefault();
+         
+             // Store hash
+             var hash = this.hash;
+         
+             // Using jQuery's animate() method to add smooth page scroll
+             // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+             $('html, body').animate({
+               scrollTop: $(hash).offset().top
+             }, 1500, function(){
+            
+               // Add hash (#) to URL when done scrolling (default click behavior)
+               window.location.hash = hash;
+             });
+           });
+         });
+      </script>
+    </body>
+</html>
